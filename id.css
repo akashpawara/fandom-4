@@ -1,0 +1,94 @@
+body {
+    margin:0px;
+  }
+  .id-card-wrapper {
+    height: 100vh;
+    width:100%;
+    background-color: #122023;
+    display: flex;
+  }
+  .id-card {
+    flex-basis: 100%;
+    max-width: 50em;
+    border: 2px solid #0AE0DF;
+    margin: auto;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  .profile-row {
+    display: flex;
+  }
+  .profile-row .dp {
+    flex-basis: 33.3%;
+    position: relative;
+    margin: 64px;
+    align-self: center;
+  }
+  .profile-row .desc {
+    flex-basis: 66.6%;
+  }
+  
+  .profile-row .dp img {
+    max-width: 100%;
+    border-radius: 50%;
+    display: block;
+  }
+  .profile-row .desc {
+    padding: 1em;
+  }
+  
+  .profile-row .dp .dp-arc-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 6px solid transparent;
+    border-top-color: #0AE0DF;
+    border-radius: 50%;
+    top: -6px;
+    left: -6px;
+  
+    animation-duration: 2s;
+    animation-name: rotate-clock;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes rotate-clock {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .profile-row .dp .dp-arc-outer {
+    position: absolute;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border: 6px solid transparent;
+    border-bottom-color: #0AE0DF;
+    border-radius: 50%;
+    top: -12px;
+    left: -12px;
+  
+    animation-duration: 2s;
+    animation-name: rotate-anticlock;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes rotate-anticlock {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  
+  .profile-row .desc {
+    font-family: 'Orbitron', sans-serif;
+    color: #a4f3f2;
+  }
+  .profile-row .desc h1 {
+    margin: 0px;
+  }
